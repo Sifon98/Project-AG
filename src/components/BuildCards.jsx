@@ -8,7 +8,7 @@ import CrucibleImg from '../img/CrucibleLogo.png'
 // Displays all the build cards that the sorting function decided to show
 export default function BuildCards({buildTitle, tags, classImg, superImg, aspectImg1, aspectImg2, exoticImg}) {
   return (
-    <Link to={{pathname: `/Project-AG/build-guide`, search: `name=${buildTitle}`}} id={classImg} className="build">
+    <Link to={{pathname: `/build-guide`, search: `name=${buildTitle}`}} id={classImg} className="build">
         <div className="build-info">
             <div className="img-container">
                 { tags[0] == "HUNTER" ? <img src={ HunterImg } /> : 

@@ -35,25 +35,25 @@ export default function header() {
 
   // Double check that everything is correct (makes everything work when users uses back function in browser)
   useEffect(() => {
-    if (location.pathname == "/Project-AG/"){
+    if (location.pathname == "/"){
         setIsActive1(true);
         setIsActive2(false);
         setIsActive3(false);
         setIsActive4(false);
         activeNav(setUseCheck1)
-    }else if (location.pathname == '/Project-AG/builds'){
+    }else if (location.pathname == '/builds'){
         setIsActive1(false);
         setIsActive2(true);
         setIsActive3(false);
         setIsActive4(false);
         activeNav(setUseCheck2)
-    }else if (location.pathname == '/Project-AG/warlock'){
+    }else if (location.pathname == '/warlock'){
         setIsActive1(false);
         setIsActive2(false);
         setIsActive3(true);
         setIsActive4(false);
         activeNav(setUseCheck3)
-    }else if (location.pathname == '/Project-AG/titan'){
+    }else if (location.pathname == '/titan'){
         setIsActive1(false);
         setIsActive2(false);
         setIsActive3(false);
@@ -71,19 +71,19 @@ export default function header() {
         </div>
         <ul>
             <li>
-                <Link className={isActive1 ? 'addcolor' : ''} to="/Project-AG/" onClick={() => activeNav(setUseCheck1)}>Home</Link>
+                <Link className={isActive1 ? 'addcolor' : ''} to="/" onClick={() => activeNav(setUseCheck1)}>Home</Link>
                 <div className={useCheck1 == true ? isActive1 ? 'addline' : 'removeline' : ''}></div>
             </li>
             <li>
-                <Link className={isActive2 ? 'addcolor' : ''} to="/Project-AG/builds" onClick={() => activeNav(setUseCheck2)}>Builds</Link>
+                <Link className={isActive2 ? 'addcolor' : ''} to="/builds" onClick={() => activeNav(setUseCheck2)}>Builds</Link>
                 <div className={useCheck2 == true ? isActive2 ? 'addline' : 'removeline' : ''}></div>
             </li>
             <li>
-                <Link className={isActive3 ? 'addcolor' : ''} to="/Project-AG/warlock" onClick={() => activeNav(setUseCheck3)}>Warlock</Link>
+                <Link className={isActive3 ? 'addcolor' : ''} to="/warlock" onClick={() => activeNav(setUseCheck3)}>Warlock</Link>
                 <div className={useCheck3 == true ? isActive3 ? 'addline' : 'removeline' : ''}></div>
             </li>
             <li>
-                <Link className={isActive4 ? 'addcolor' : ''} to="/Project-AG/titan" onClick={() => activeNav(setUseCheck4)}>Titan</Link>
+                <Link className={isActive4 ? 'addcolor' : ''} to="/titan" onClick={() => activeNav(setUseCheck4)}>Titan</Link>
                 <div className={useCheck4 == true ? isActive4 ? 'addline' : 'removeline' : ''}></div>
             </li>
         </ul>

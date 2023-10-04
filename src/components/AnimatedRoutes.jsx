@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Routes, useLocation } from 'react-router-dom'
+import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom'
 import { Home } from '../pages/Home'
 import { Builds } from '../pages/Builds'
 import { Warlock } from '../pages/Warlock'
@@ -11,12 +11,14 @@ export default function AnimatedRoutes() {
   const location = useLocation();
   
   return (
-    <Routes location={location} key={location.pathname}>
-      <Route path="/Project-AG/" element={<Home />}/>
-      <Route path="/Project-AG/builds" element={<Builds />}/>
-      <Route path="/Project-AG/warlock" element={<Warlock />}/>
-      <Route path="/Project-AG/titan" element={<Titan />}/>
-      <Route path="/Project-AG/build-guide" element={<BuildGuide />}/>
-    </Routes>
+    <BrowserRouter basename={import.meta.env.DEV ? '/' : '/Project-AG/'}>
+      <Routes location={location} key={location.pathname}>
+        <Route path="/" element={<Home />}/>
+        <Route path="/builds" element={<Builds />}/>
+        <Route path="/warlock" element={<Warlock />}/>
+        <Route path="/titan" element={<Titan />}/>
+        <Route path="/build-guide" element={<BuildGuide />}/>
+      </Routes>
+    </BrowserRouter>
   )
 }
