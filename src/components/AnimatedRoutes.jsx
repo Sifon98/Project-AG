@@ -11,14 +11,12 @@ export default function AnimatedRoutes() {
   const location = useLocation();
   
   return (
-    <BrowserRouter basename={import.meta.env.DEV ? '/' : '/Project-AG/'}>
-      <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<Home />}/>
-        <Route path="/builds" element={<Builds />}/>
-        <Route path="/warlock" element={<Warlock />}/>
-        <Route path="/titan" element={<Titan />}/>
-        <Route path="/build-guide" element={<BuildGuide />}/>
-      </Routes>
-    </BrowserRouter>
+    <Routes location={location} key={location.pathname}>
+      <Route path="/" element={<Home />}/>
+      <Route path="/builds" element={<Builds />}/>
+      <Route path="/warlock" element={<Warlock />}/>
+      <Route path="/titan" element={<Titan />}/>
+      <Route path="/build-guide" element={<BuildGuide />}/>
+    </Routes>
   )
 }
