@@ -35,25 +35,25 @@ export default function header() {
 
   // Double check that everything is correct (makes everything work when users uses back function in browser)
   useEffect(() => {
-    if (location.pathname == "/"){
+    if (location.pathname == "/Project-AG"){
         setIsActive1(true);
         setIsActive2(false);
         setIsActive3(false);
         setIsActive4(false);
         activeNav(setUseCheck1)
-    }else if (location.pathname == '/builds'){
+    }else if (location.pathname == '/Project-AG/builds'){
         setIsActive1(false);
         setIsActive2(true);
         setIsActive3(false);
         setIsActive4(false);
         activeNav(setUseCheck2)
-    }else if (location.pathname == '/warlock'){
+    }else if (location.pathname == '/Project-AG/warlock'){
         setIsActive1(false);
         setIsActive2(false);
         setIsActive3(true);
         setIsActive4(false);
         activeNav(setUseCheck3)
-    }else if (location.pathname == '/titan'){
+    }else if (location.pathname == '/Project-AG/titan'){
         setIsActive1(false);
         setIsActive2(false);
         setIsActive3(false);
