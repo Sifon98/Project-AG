@@ -64,7 +64,7 @@ export function Home() {
                 You will learn what <strong>abilites</strong> to use, which the best <strong>exotics</strong>, <strong>weapons</strong> and <strong>mods</strong> are for your chosen build.
                 After that you will recieve <strong>detailed instructions</strong> with tips for <strong>endgame</strong> and alternative variants for the builds.
               </p>
-              <Link to="/Project-AG/builds" className="button">READ MORE</Link>
+              <Link to="/builds" className="button">READ MORE</Link>
             </div>
           </div>
         </section>
