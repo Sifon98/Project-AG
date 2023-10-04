@@ -12,11 +12,11 @@ export default function AnimatedRoutes() {
   
   return (
     <Routes location={location} key={location.pathname}>
-      <Route path="/" element={<Home />}/>
-      <Route path="/builds" element={<Builds />}/>
-      <Route path="/warlock" element={<Warlock />}/>
-      <Route path="/titan" element={<Titan />}/>
-      <Route path="/build-guide" element={<BuildGuide />}/>
+      <Route path="/Project-AG/" element={<Home />}/>
+      <Route path="/Project-AG/builds" element={<Builds />}/>
+      <Route path="/Project-AG/warlock" element={<Warlock />}/>
+      <Route path="/Project-AG/titan" element={<Titan />}/>
+      <Route path="/Project-AG/build-guide" element={<BuildGuide />}/>
     </Routes>
   )
 }
