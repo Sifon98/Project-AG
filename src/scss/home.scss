@@ -1,0 +1,228 @@
+$bg-image: url('../img/MainBackground.png');
+$border-color: #97989b;
+$main-color: #0A0A12;
+$button-color: #111111;
+
+// CSS for the landing, intro section
+.landing {
+    background-image: $bg-image;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    z-index: -10;
+    display: flex;
+
+    .text-box {
+        padding: 30px;
+        width: auto;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+            margin: 0px;
+            font-size: 90px;
+            letter-spacing: 0.4rem;
+        }
+        
+        hr {
+            margin: 0px;
+            width: 150px;
+            border: 5px solid white;
+        }
+
+        .large-line {
+            width: 100%;
+            margin: 10px 0px 0px 0px;
+            border: 2px solid white;
+        }
+
+        a {
+            padding-top: 50px;
+            display: flex;
+            text-decoration: none;
+            justify-content: center;
+            align-items: center;
+
+            .arrow {
+                margin: 0px 20px;
+                border-left: 16px solid transparent;
+                border-right: 16px solid transparent;
+                border-top: 20px solid white;
+                transition: ease-in-out 0.2s;
+            }
+        }
+
+        a:hover {
+
+            .hr-left {            
+                width: 340px;
+            }
+
+            .arrow {
+                transform: scale(1.3);
+                margin: 0px 24px;
+            }
+
+            .hr-right {
+                width: 340px;
+            }
+        }
+    }
+}
+
+// CSS for the first section, Builds
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+
+    section {
+        padding-top: 125px;
+        padding-bottom: 125px;
+        display: flex;
+        width: 100%;
+        height: 60vh;
+        background-color: $main-color;    
+        border-bottom: 5px solid;    
+        border-image: linear-gradient(to right, $main-color 10%, $border-color 30%, $border-color 70%, $main-color 90%) 3;
+
+        .cards {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50%;
+
+            .card {
+                transform-origin: bottom left;
+                position: absolute;
+                background-image: url(../img/ClassPortrait/SolarHunter1.png);
+                background-position: center;
+                background-size: cover;
+                width: 500px;
+                height: 300px;
+                z-index: 4;
+                border-radius: 30px;
+                transition: ease-in-out 0.8s;
+                letter-spacing: 0.2rem;
+            }
+
+            .card:nth-child(2) {
+                background-image: url(../img/ClassPortrait/StrandTitan1.png);
+                z-index: 3;
+            }
+
+            .card:nth-child(3) {
+                background-image: url(../img/ClassPortrait/StasisHunter1.png);
+                z-index: 2;
+            }
+
+            .card:nth-child(4) {
+                background-image: url(../img/ClassPortrait/VoidWarlock1.png);
+                z-index: 1;
+            }
+
+            .transform {
+                transform: rotate(-25deg);
+            }
+
+            .transform:nth-child(2) {
+                transform: rotate(-10deg);
+            }
+
+            .transform:nth-child(3) {
+                transform: rotate(5deg);
+            }
+
+            .transform:nth-child(4) {
+                transform: rotate(15deg);
+            }
+
+            @keyframes scaleProgress {
+                0% {
+                  transform: scaleX(0);
+                }
+                100% {
+                  transform: scaleX(1);
+                }
+              }
+        }
+
+        .info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+
+            .text-container {
+                max-width: 80%;
+
+                h2 {
+                    margin: 0px 0px 10px 0px;
+                }
+
+                hr {
+                    margin: 0px;
+                    width: 150px;
+                    border: 5px solid $border-color;
+                }
+
+                .button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 220px;
+                    height: 60px;
+                    font-size: 18px;
+                    background-color: $button-color;
+                    border: 3px solid $border-color;
+                    color: white;
+                    text-align: center;
+                    outline: none;
+                    cursor: pointer;
+                    transition: 0.3s;
+                    margin: 50px 0px 0px 0px;
+                    text-decoration: none;
+                    letter-spacing: 0.2rem;
+                }
+
+                .button:hover {
+                    box-shadow:
+                        0 0 0 4px $main-color,
+                        0 0 0 7px hsl(0, 0%, 90%);
+                    transition: 0.3s;
+                }
+            }
+        }
+    }
+    
+    .guide-section {
+        border: none;
+
+       .raid-showcase {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50%;
+
+            img {
+                width: 500px;
+            }
+       }
+    }
+}
+
+.load-anim {
+    animation: fadeInOnLoad 1s;
+}
+
+@keyframes fadeInOnLoad {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
