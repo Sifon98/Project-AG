@@ -1,7 +1,10 @@
 // Here is all the info for the builds
 export const preBuildArray = [
     // Build 1 =========================================================================================================
-    {buildTitle:"invisArcHunter", classImg: "arcH", tags: ['HUNTER', 'ARC', 'PVE'],
+    {buildId:"invisArcHunter", classImg: "arcH", tags: ['HUNTER', 'ARC', 'PVE'],
+        buildTitle: "ARC HUNTER",
+        buildText: "One of, if not the best build for Hunters. Meele focused with insane survivability. Perfect for tough PVE endgame content.",
+        author: "Sifon",
         superImg: "https://www.bungie.net/common/destiny2_content/icons/edf23f2e6951efcab4c4b10630b6f7c4.png", 
         aspectImg1: "https://www.bungie.net/common/destiny2_content/icons/6a3e6a42ba1ebbd55714f64f26e0d63e.jpg", 
         aspectImg2: "https://www.bungie.net/common/destiny2_content/icons/7a06c8d2240676ebe3d9479bca280375.jpg", 
@@ -207,7 +210,10 @@ export const preBuildArray = [
         }
     },
     // Build 2 =========================================================================================================
-    {buildTitle:"invisVoidHunter", classImg: "voidH", tags: ['HUNTER', 'VOID', 'PVE'],
+    {buildId:"invisVoidHunter", classImg: "voidH", tags: ['HUNTER', 'VOID', 'PVE'],
+        buildTitle: "VOID HUNTER",
+        buildText: "One of, if not the best build for Hunters. Meele focused with insane survivability. Perfect for tough PVE endgame content.",
+        author: "Sifon",
         superImg: "https://www.bungie.net/common/destiny2_content/icons/61feac4f1271ba6cecc29cc50e20ab5a.png", 
         aspectImg1: "https://www.bungie.net/common/destiny2_content/icons/f23323d11f0ad79781f91c70f4c644ac.jpg", 
         aspectImg2: "https://www.bungie.net/common/destiny2_content/icons/ed7f8c49b77fa46f4eec87a3c167c4b1.jpg", 
@@ -419,8 +425,11 @@ export const preBuildArray = [
             }
         }
     },
-        // Build 3 =========================================================================================================
-        {buildTitle:"aoeStrandHunter", classImg: "strandH", tags: ['HUNTER', 'STRAND', 'PVE'],
+    // Build 3 =========================================================================================================
+    {buildId:"aoeStrandHunter", classImg: "strandH", tags: ['HUNTER', 'STRAND', 'PVE'],
+        buildTitle: "STRAND HUNTER",
+        buildText: "One of, if not the best build for Hunters. Meele focused with insane survivability. Perfect for tough PVE endgame content.",
+        author: "Sifon",
         superImg: "https://www.bungie.net/common/destiny2_content/icons/3da7e8684b09600e90ea5c16f1edebe0.png", 
         aspectImg1: "https://www.bungie.net/common/destiny2_content/icons/838134e7e3d13bb5b74ae995653715fc.jpg", 
         aspectImg2: "https://www.bungie.net/common/destiny2_content/icons/4ba20180085e906f97ab2d039c20f1de.jpg", 

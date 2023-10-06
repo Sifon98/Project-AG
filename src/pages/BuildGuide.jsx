@@ -10,13 +10,13 @@ import SvgPage from '../components/Svg'
 export function BuildGuide() {
   // Get the array with all the build info
   const [queryParameters] = useSearchParams()
-  const urlBuildTitle = queryParameters.get('name')
+  const urlBuildId = queryParameters.get('name')
 
   return (
     <>
     { preBuildArray == '' ? null :
     preBuildArray.map((data, i) => (
-        data.buildTitle === urlBuildTitle ?
+        data.buildId === urlBuildId ?
         <div key={i} className="build-guide-container">
             <div className="build-general">
                 <section id={data.classImg} className="background-img">

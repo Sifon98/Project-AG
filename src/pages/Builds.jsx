@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import '../scss/builds.scss'
-import BuildCards from '../components/BuildCards'
 import BuildContainer from '../components/BuildContainer'
 import { preBuildArray } from '../components/BuildArray'
 
@@ -41,7 +40,7 @@ export function Builds() {
 
   return (
     <>
-      <div className="intro"><h2>BUILDS FOR HUNTERS,<br/>WARLOCKS AND TITANS</h2></div>
+      <div className="intro"></div>
       {/* an invisible box that hides the menu when you click outside of it */}
       <div className={`hider ${menuOpen1 || menuOpen2 || menuOpen3 ? 'active' : 'inactive'}`} onClick={()=>{closeAll()}}></div>
       <div className="sorting-container">
@@ -85,6 +84,12 @@ export function Builds() {
               <li id="PVP" onClick={handleMenu3}>PVP</li>
             </ul>
           </div>
+        </div>
+      </div>
+      <div className="info-wrapper">
+        <div className="quick-info">
+          <h3>All builds are future proof, meaning that they 
+            do not require any artifact mods.</h3>
         </div>
       </div>
       {/* Links to a component that sorts the builds and displays them */}
