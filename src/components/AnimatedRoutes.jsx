@@ -1,10 +1,11 @@
 import React from 'react'
-import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom'
+import { Route, Routes, useLocation } from 'react-router-dom'
 import { Home } from '../pages/Home'
 import { Builds } from '../pages/Builds'
 import { Guides } from '../pages/Guides'
 import { Titan } from '../pages/Titan'
 import { BuildGuide } from '../pages/BuildGuide'
+import { GuidePage } from '../pages/GuidePage'
 
 
 export default function AnimatedRoutes() {
@@ -17,6 +18,7 @@ export default function AnimatedRoutes() {
       <Route path="/guides" element={<Guides />}/>
       <Route path="/titan" element={<Titan />}/>
       <Route path="/build-guide" element={<BuildGuide />}/>
+      <Route path="/guide-page" element={<GuidePage />}/>
     </Routes>
   )
 }

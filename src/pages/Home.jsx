@@ -74,7 +74,7 @@ export function Home() {
               <h2>GUIDES</h2>
               <hr />
               <p>UNDER CONSTRUCTION</p>
-              <Link to="#" className="button">READ MORE</Link>
+              <Link to="/guides" className="button">READ MORE</Link>
             </div>
           </div>
           <div className="raid-showcase">

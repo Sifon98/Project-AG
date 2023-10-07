@@ -14,7 +14,7 @@ export default function GuideCards({guideId, guideTitle, guideUnderTitle, guideT
                     <h3 className="under-header">{guideUnderTitle}</h3>
                     <p>{parse(guideText)}</p>
                 </div>
-                <Link to="#" className="button">READ MORE</Link>
+                <Link to={{pathname: `/guide-page`, search: `name=${guideId}`}} className="button">READ MORE</Link>
             </div>
         </div>
     </div>
