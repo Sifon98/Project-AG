@@ -47,7 +47,7 @@ export default function header() {
         setIsActive3(false);
         setIsActive4(false);
         activeNav(setUseCheck2)
-    }else if (location.pathname == '/warlock'){
+    }else if (location.pathname == '/guides'){
         setIsActive1(false);
         setIsActive2(false);
         setIsActive3(true);
@@ -65,9 +65,9 @@ export default function header() {
   return (
     <div className={color ? "navbar navbar-dark" : "navbar"}>
         <div className="logo">
-            <h1 className="first">DESTINY</h1>
+            <h1 className="first">ASCENDANT</h1>
             <img src={logo} alt="Destiny logo" />
-            <h1>[TAG]</h1>
+            <h1>GUARDIAN</h1>
         </div>
         <ul>
             <li>
@@ -79,7 +79,7 @@ export default function header() {
                 <div className={useCheck2 == true ? isActive2 ? 'addline' : 'removeline' : ''}></div>
             </li>
             <li>
-                <Link className={isActive3 ? 'addcolor' : ''} to="/warlock" onClick={() => activeNav(setUseCheck3)}>Warlock</Link>
+                <Link className={isActive3 ? 'addcolor' : ''} to="/guides" onClick={() => activeNav(setUseCheck3)}>Guides</Link>
                 <div className={useCheck3 == true ? isActive3 ? 'addline' : 'removeline' : ''}></div>
             </li>
             <li>
