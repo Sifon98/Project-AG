@@ -1,7 +1,8 @@
 import React from 'react'
+import Parallax from '../components/parallax'
 
 export function Titan() {
   return (
-    <h1>titan</h1>
+    <Parallax />
   )
 }

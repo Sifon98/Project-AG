@@ -1,0 +1,215 @@
+$border-color: #97989b;
+$main-color: #0A0A12;
+$button-color: #111111;
+
+.intro-guides {
+    display: flex;
+    align-items: flex-end;
+    background-image: url(../img/GuideBanner.png);
+    background-size: cover;
+    background-repeat: none;
+    background-position: 0px;
+    height: 500px;
+    border-bottom: 5px solid $border-color;
+}
+
+.hider {
+    z-index: 0;
+    display: none;
+    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+
+.active {
+    display: flex !important;
+    animation: fadein forwards 0.3s;
+}
+
+.inactive {
+    animation: fadeout forwards 0.3s;
+}
+
+@keyframes fadein {
+    0% { opacity: 0;}
+    100% { opacity: 1;}
+}
+
+@keyframes fadeout {
+    0% { opacity: 1; display: flex;}
+    100% { opacity: 0; display: none;}
+}
+
+.box-shadow {
+    box-shadow:
+        0 0 0 4px rgb(65, 65, 65),
+        0 0 0 7px hsl(0, 0%, 90%);
+}
+
+// CSS for the sorting functions
+.sorting-container {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    background-color: $main-color;
+
+    h2 {
+        margin: 0px 20px 0px 70px;
+    }
+
+    .menu-container {
+        z-index: 2;
+
+        .menu-selector {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 220px;
+            height: 60px;
+            font-size: 18px;
+            background-color: $button-color;
+            border: 3px solid $border-color;
+            color: white;
+            text-align: center;
+            outline: none;
+            cursor: pointer;
+            transition: 0.3s;
+            margin: 0px 20px;
+            letter-spacing: 0.2rem;
+        }
+
+        .menu-selector:hover {
+            box-shadow:
+                0 0 0 4px rgb(65, 65, 65),
+                0 0 0 7px hsl(0, 0%, 90%);
+            transition: 0.3s;
+        }
+
+        .dropdown-menu {
+            display: none;
+            margin-top: 13px !important;
+            border: 3px solid $border-color;
+            position: absolute;
+            cursor: pointer;
+            z-index: 2;
+            background-color: $button-color;
+            margin: 0px 20px;
+
+            ul {
+                padding: 0px;
+                margin: 0px;
+                z-index: 100;
+
+                li {
+                    display: flex;        
+                    align-items: center;
+                    justify-content: center;
+                    list-style-type: none;
+                    text-decoration: none;
+                    width: 220px;
+                    height: 60px;
+                    font-size: 18px;
+                    border-bottom: 2px solid $border-color;
+                    color: white;
+                    text-align: center;
+                    outline: none;
+                }
+
+                li:last-child {
+                    border-bottom: none !important;
+                }
+
+                li:hover {
+                    background-color: rgb(65, 65, 65);
+                }
+            }
+        }
+    }
+}
+
+.guide-width {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    .largeLine {
+        margin: 10px 0px 0px 0px;
+        border: 1px solid $border-color;
+    }
+    
+    .smallLine {
+        margin: 0px;
+        width: 40px;
+        border: 3px solid $border-color;
+    }
+  
+    .guide-container {
+        width: 1600px;
+        padding: 20px 0px 15px 0px;
+
+        .guide-card-img {
+            width: 100%;
+            background-image: url(../img/Root-bg.png);
+            background-position: 450px bottom;
+            background-size: cover;
+            border-radius: 50px;
+
+            .layer {
+                background-image: radial-gradient(circle at 100% 50%, rgba(10, 10, 18, 0.7), $main-color, $main-color);
+                border-radius: 50px;
+
+                .guide-card {
+                    display: flex;
+                    flex-direction: column;
+                    height: 420px;
+                    width: 55%;
+                    padding: 40px;
+    
+                    h3 {
+                        margin: 0px 0px 10px 20px;
+                    }
+
+                    .under-header {
+                        margin-top: 40px;
+                    }
+
+                    p {
+                        margin: 40px 0px 10px 20px;
+                    }
+
+                    .button {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 220px;
+                        height: 60px;
+                        font-size: 18px;
+                        background-color: $button-color;
+                        border: 3px solid $border-color;
+                        color: white;
+                        text-align: center;
+                        outline: none;
+                        cursor: pointer;
+                        transition: 0.3s;
+                        margin: 40px 0px 10px 20px;
+                        text-decoration: none;
+                        letter-spacing: 0.2rem;
+                    }
+    
+                    .button:hover {
+                        box-shadow:
+                            0 0 0 4px $main-color,
+                            0 0 0 7px hsl(0, 0%, 90%);
+                        transition: 0.3s;
+                    }
+                }
+            }
+        }
+    }
+}
