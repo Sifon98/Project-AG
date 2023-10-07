@@ -57,7 +57,7 @@ $button-color: #111111;
 
 .box-shadow {
     box-shadow:
-        0 0 0 4px rgb(65, 65, 65),
+        0 0 0 4px $main-color,
         0 0 0 7px hsl(0, 0%, 90%);
 }
 
@@ -97,7 +97,7 @@ $button-color: #111111;
 
         .menu-selector:hover {
             box-shadow:
-                0 0 0 4px rgb(65, 65, 65),
+                0 0 0 4px $main-color,
                 0 0 0 7px hsl(0, 0%, 90%);
             transition: 0.3s;
         }

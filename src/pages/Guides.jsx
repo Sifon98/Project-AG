@@ -1,8 +1,11 @@
 import React, { useState } from 'react'
 import '../scss/guides.scss'
 import { Link } from "react-router-dom"
+import { preGuideArray } from '../components/GuideArray'
+import GuideContainer from '../components/GuideContainer'
 
 export function Guides() {
+  const guideArray = preGuideArray;
   // Used to change the dropdown menus
   const [menuOpen1, setMenuOpen1] = useState();
   // Used to sort builds
@@ -38,30 +41,7 @@ export function Guides() {
         </div>
       </div>
     </div>
-    <div className="guide-width">
-      <div className="guide-container">
-        {selectActivity == "ANY ACTIVITY" ?
-          <div className="guide-card-img">
-            <div className="layer">
-              <div className="guide-card">
-                <h3 className="medium-header">ROOT OF NIGHTMARES</h3>
-                <hr className="largeLine" />
-                <hr className="smallLine" />
-                <h3 className="under-header">All encounters • Challenges • Red border • Secret chests</h3>
-                <p>As one of the <strong>easier</strong> Raids in Destiny 2, <strong>Root of Nightmares </strong>
-                  tends to be more relaxing than other Raids. The large
-                  amount of <strong>viable movement techniques</strong> makes this a
-                  super enjoyable experience for players willing to learn
-                  more advanced movement tech. </p>
-                <Link to="#" className="button">READ MORE</Link>
-              </div>
-            </div>
-          </div>
-         : selectActivity == "RAIDS" ? 
-         <div>Hello World</div>
-         : null}
-      </div>
-    </div>
+    <GuideContainer guideArray={guideArray} selectActivity={selectActivity}/>
     </>
   )
 }

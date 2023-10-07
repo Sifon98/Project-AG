@@ -45,7 +45,7 @@ $button-color: #111111;
 
 .box-shadow {
     box-shadow:
-        0 0 0 4px rgb(65, 65, 65),
+        0 0 0 4px $main-color,
         0 0 0 7px hsl(0, 0%, 90%);
 }
 
@@ -85,7 +85,7 @@ $button-color: #111111;
 
         .menu-selector:hover {
             box-shadow:
-                0 0 0 4px rgb(65, 65, 65),
+                0 0 0 4px $main-color,
                 0 0 0 7px hsl(0, 0%, 90%);
             transition: 0.3s;
         }
@@ -151,14 +151,14 @@ $button-color: #111111;
   
     .guide-container {
         width: 1600px;
-        padding: 20px 0px 15px 0px;
+        padding: 0px 0px 40px 0px;
 
         .guide-card-img {
             width: 100%;
-            background-image: url(../img/Root-bg.png);
-            background-position: 450px bottom;
-            background-size: cover;
+            background-position: 730px bottom;
+            background-size: contain;
             border-radius: 50px;
+            margin-top: 40px;
 
             .layer {
                 background-image: radial-gradient(circle at 100% 50%, rgba(10, 10, 18, 0.7), $main-color, $main-color);
@@ -167,20 +167,26 @@ $button-color: #111111;
                 .guide-card {
                     display: flex;
                     flex-direction: column;
+                    justify-content: space-between;
                     height: 420px;
                     width: 55%;
                     padding: 40px;
+
+                    .flex-container {
+                        display: flex;
+                        flex-direction: column;
+
+                        h3 {
+                            margin: 0px 0px 10px 20px;
+                        }
     
-                    h3 {
-                        margin: 0px 0px 10px 20px;
-                    }
-
-                    .under-header {
-                        margin-top: 40px;
-                    }
-
-                    p {
-                        margin: 40px 0px 10px 20px;
+                        .under-header {
+                            margin-top: 40px;
+                        }
+    
+                        p {
+                            margin: 40px 0px 10px 20px;
+                        }
                     }
 
                     .button {
@@ -212,4 +218,12 @@ $button-color: #111111;
             }
         }
     }
+}
+
+#rootofnightmares {
+    background-image: url(../img/Root-bg.png);
+}
+
+#kingsfall {
+    background-image: url(../img/King-bg.png);
 }
