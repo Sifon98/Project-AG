@@ -63,6 +63,27 @@ export const preGuideArray = [
                     text: "NEZAREC"
                 }
             ],
+            section: [
+                {
+                    title: "INTRO - ROOT OF NIGHTMARES",
+                    header: "GENERAL INFO",
+                    text: "As one of the easier Raids in Destiny 2, Root of Nightmares tends to be more relaxing than other Raids. The large amount of viable movement techniques makes this a super enjoyable experience for players willing to learn more advanced movement tech.",
+                    underSection : [
+                        {
+                            style: "style1",
+                            title: "Hello World",
+                            text: "hi man",
+                            image: "here it is"
+                        },
+                        {
+                            style: "style2",
+                            title: "Hello World",
+                            text: "hi man",
+                            image: "here it is"
+                        }
+                    ]
+                }
+            ]
         }
     },
     // Guide 2 =========================================================================================================
@@ -128,6 +149,27 @@ export const preGuideArray = [
                     text: "ORYX"
                 }
             ],
+            section: [
+                {
+                    title: "INTRO - ROOT OF NIGHTMARES",
+                    header: "GENERAL INFO",
+                    text: "As one of the easier Raids in Destiny 2, Root of Nightmares tends to be more relaxing than other Raids. The large amount of viable movement techniques makes this a super enjoyable experience for players willing to learn more advanced movement tech.",
+                    underSection : [
+                        {
+                            style: "style1",
+                            title: "Hello World",
+                            text: "hi man",
+                            image: "here it is"
+                        },
+                        {
+                            style: "style2",
+                            title: "Hello World",
+                            text: "hi man",
+                            image: "here it is"
+                        }
+                    ]
+                }
+            ]
         }
     },
 ]

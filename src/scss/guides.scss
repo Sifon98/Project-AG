@@ -313,17 +313,36 @@ $button-color: #111111;
                         display: flex;
                         flex-direction: column;
                         align-self: center;
+                        margin: 20px 20px;
     
                         h3 {
-                            margin: 40px 0px 10px 20px;
-                        }
-    
-                        hr {
-                            margin-left: 20px;
+                            margin: 40px 0px 10px 0px;
                         }
     
                         p {
-                            margin: 20px 20px;
+                            margin: 20px 0px;
+                        }
+                    }
+
+                    .style1 {
+                        display: flex;
+                        margin: 0px 20px;
+
+                        .text {
+                            width: 60%;
+                            margin-right: 50px;
+
+                            h3 {
+                                margin: 0px 0px 10px 0px;
+                            }
+                        }
+
+                        .img {
+                            width: 40%;
+
+                            img {
+                                width: 100%;
+                            }
                         }
                     }
                 }
