@@ -65,24 +65,88 @@ export const preGuideArray = [
             ],
             section: [
                 {
-                    title: "INTRO - ROOT OF NIGHTMARES",
-                    header: "GENERAL INFO",
+                    title: "INTRO <span>/</span>/ ROOT OF NIGHTMARES",
+                    text: "As one of the easier Raids in Destiny 2, Root of Nightmares tends to be more relaxing than other Raids. The large amount of viable movement techniques makes this a super enjoyable experience for players willing to learn more advanced movement tech.",
+                    underSection: [
+                        {
+                            style: "style-noheader",
+                            text: "As one of the easier Raids in Destiny 2, Root of Nightmares tends to be more relaxing than other Raids. The large amount of viable movement techniques makes this a super enjoyable experience for players willing to learn more advanced movement tech.",
+                            image: "LightNode"
+                        },
+                        {
+                            style: "style-header",
+                            title: "RED BORDER",
+                            text: "As one of the easier Raids in Destiny 2, Root of Nightmares tends to be more relaxing than other Raids. The large amount of viable movement techniques makes this a super enjoyable experience for players willing to learn more advanced movement tech.",
+                            image: "RootRedBorder"
+                        },
+                        {
+                            id: "redborder1",
+                            style: "style-header-inverted",
+                            title: "RED BORDER <span>/</span>/ 1",
+                            text: "As one of the easier Raids in Destiny 2, Root of Nightmares tends to be more relaxing than other Raids. The large amount of viable movement techniques makes this a super enjoyable experience for players willing to learn more advanced movement tech.",
+                            image: "RootRedBorder1"
+                        }
+                    ],
+                    fakeId: "cataclysm"
+                },
+                {
+                    title: "CATACLYSM",
                     text: "As one of the easier Raids in Destiny 2, Root of Nightmares tends to be more relaxing than other Raids. The large amount of viable movement techniques makes this a super enjoyable experience for players willing to learn more advanced movement tech.",
                     underSection : [
                         {
-                            style: "style1",
-                            title: "Hello World",
-                            text: "hi man",
-                            image: "here it is"
+                            style: "style-noheader",
+                            text: "As one of the easier Raids in Destiny 2, Root of Nightmares tends to be more relaxing than other Raids. The large amount of viable movement techniques makes this a super enjoyable experience for players willing to learn more advanced movement tech.",
+                            image: "CataclysmMap",
+                            module: true,
+                            href: "https://boosty.to/levdyakonov",
+                            name: "pryanie",
                         },
                         {
-                            style: "style2",
-                            title: "Hello World",
-                            text: "hi man",
-                            image: "here it is"
+                            style: "style-header",
+                            title: "RUNNER",
+                            text: "As one of the easier Raids in Destiny 2, Root of Nightmares tends to be more relaxing than other Raids. The large amount of viable movement techniques makes this a super enjoyable experience for players willing to learn more advanced movement tech.",
+                            image: "CataclysmRunner"
+                        },
+                        {
+                            style: "style-header-inverted",
+                            title: "PSIONS <span>/</span>/ TORMENTOR",
+                            text: "As one of the easier Raids in Destiny 2, Root of Nightmares tends to be more relaxing than other Raids. The large amount of viable movement techniques makes this a super enjoyable experience for players willing to learn more advanced movement tech.",
+                            image: "CataclysmOther"
+                        },
+                        {
+                            style: "style-text",
+                            title: "CHALLENGE",
+                            text: "As one of the easier Raids in Destiny 2, Root of Nightmares tends to be more relaxing than other Raids. The large amount of viable movement techniques makes this a super enjoyable experience for players willing to learn more advanced movement tech.",
+                        },
+                        {
+                            id: "secretchest1",
+                            style: "style-header",
+                            title: "SECRET CHEST <span>/</span>/ 1",
+                            text: "As one of the easier Raids in Destiny 2, Root of Nightmares tends to be more relaxing than other Raids. The large amount of viable movement techniques makes this a super enjoyable experience for players willing to learn more advanced movement tech.",
+                            image: "TestImg"
                         }
-                    ]
-                }
+                    ],
+                    fakeId: "scission"
+                },
+                {
+                    title: "SCISSION",
+                    text: "As one of the easier Raids in Destiny 2, Root of Nightmares tends to be more relaxing than other Raids. The large amount of viable movement techniques makes this a super enjoyable experience for players willing to learn more advanced movement tech.",
+                    fakeId: "jumpingpuzzle"
+                },
+                {
+                    title: "JUMPING PUZZLE",
+                    text: "As one of the easier Raids in Destiny 2, Root of Nightmares tends to be more relaxing than other Raids. The large amount of viable movement techniques makes this a super enjoyable experience for players willing to learn more advanced movement tech.",
+                    fakeId: "macrocosm"
+                },
+                {
+                    title: "MACROCOSM",
+                    text: "As one of the easier Raids in Destiny 2, Root of Nightmares tends to be more relaxing than other Raids. The large amount of viable movement techniques makes this a super enjoyable experience for players willing to learn more advanced movement tech.",
+                    fakeId: "nezarec"
+                },
+                {
+                    title: "NEZAREC",
+                    text: "As one of the easier Raids in Destiny 2, Root of Nightmares tends to be more relaxing than other Raids. The large amount of viable movement techniques makes this a super enjoyable experience for players willing to learn more advanced movement tech.",
+                },
             ]
         }
     },

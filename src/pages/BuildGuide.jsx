@@ -1,11 +1,12 @@
 import React from 'react'
 import { useSearchParams } from "react-router-dom"
 import '../scss/builds.scss'
-import arcHunter from '../img/Gif/arc-hunter.gif'
 import HoverBox from '../components/HoverBox'
 import { preBuildArray } from '../components/BuildArray'
 import parse from 'html-react-parser'
 import SvgPage from '../components/Svg'
+// Gif importing
+import arcHunter from '../img/Gif/arc-hunter.gif'
 
 export function BuildGuide() {
   // Get the array with all the build info
@@ -218,7 +219,7 @@ export function BuildGuide() {
                         </div>
                         <div className="row">
                             <div className="item start-item">
-                                { data.buildGuide.gameplay.gif == "arcHunter" ? <img src={arcHunter}/> : null }
+                                { data.buildGuide.gameplay.gif == "arcHunterGif" ? <img src={arcHunter}/> : null }
                             </div>
                             <div className="item">
                                 <h3>GAMEPLAY LOOP</h3>
