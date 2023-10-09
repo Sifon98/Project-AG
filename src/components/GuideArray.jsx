@@ -13,7 +13,7 @@ export const preGuideArray = [
                     text: "INTRO"
                 },
                 {
-                    href: "#intro",
+                    href: "#redborder1",
                     class:  "nav-small",
                     text: "Red Border #1"
                 },
@@ -23,7 +23,7 @@ export const preGuideArray = [
                     text: "CATACLYSM"
                 },
                 {
-                    href: "#cataclysm",
+                    href: "#secretchest1",
                     class:  "nav-small",
                     text: "Secret Chest #1"
                 },

@@ -2,7 +2,11 @@ import React, {useState} from 'react'
 import { Link } from "react-router-dom"
 import { preGuideArray } from '../components/GuideArray'
 import { useSearchParams } from "react-router-dom"
-import TempImg from '../img/background.png'
+import RedBorderGif from '../img/Gif/Red-Border.gif'
+import RedBorderGif1 from '../img/Gif/Red-Border-1.gif'
+import CataclysmRunner from '../img/Gif/Cataclysm-Runner.gif'
+import CataclysmOther from '../img/Gif/Cataclysm-Psion-Tormentor.gif'
+import IntroImg from '../img/LightNode.png'
 
 export function GuidePage() {
     // Navigation Array
@@ -44,7 +48,7 @@ export function GuidePage() {
             <div className="information">
                 <section>
                     <div className="wrapper">
-                        <h3 className="medium-header">INTRO - ROOT OF NIGHTMARES</h3>
+                        <h3 className="medium-header">INTRO <span>/</span>/ ROOT OF NIGHTMARES</h3>
                         <hr className="largeLine" />
                         <hr className="smallLine" />
                         <div className="info">
@@ -52,18 +56,33 @@ export function GuidePage() {
                             <hr className="smallLine" />
                             <p>As one of the easier Raids in Destiny 2, Root of Nightmares tends to be more relaxing than other Raids. The large amount of viable movement techniques makes this a super enjoyable experience for players willing to learn more advanced movement tech.</p>
                         </div>
-                        <div className="style1">
+                        <div className="style-noheader-inverted">
+                            <div className="img">
+                                <img src={IntroImg} />
+                            </div>
+                            <div className="text">
+                                <p>As one of the easier Raids in Destiny 2, Root of Nightmares tends to be more relaxing than other Raids. The large amount of viable movement techniques makes this a super enjoyable experience for players willing to learn more advanced movement tech.</p>
+                            </div>
+                        </div>
+                        <div className="style-header">
                             <div className="text">
                                 <h3>RED BORDER</h3>
                                 <hr className="smallLine" />
                                 <p>As one of the easier Raids in Destiny 2, Root of Nightmares tends to be more relaxing than other Raids. The large amount of viable movement techniques makes this a super enjoyable experience for players willing to learn more advanced movement tech.</p>
                             </div>
                             <div className="img">
-                                <img src={TempImg} />
+                                <img src={RedBorderGif} />
                             </div>
                         </div>
-                        <div className="style2">
-
+                        <div id="redborder1" className="style-header-inverted">
+                            <div className="img">
+                                <img src={RedBorderGif1} />
+                            </div>
+                            <div className="text">
+                                <h3>RED BORDER <span>/</span>/ 1</h3>
+                                <hr className="smallLine" />
+                                <p>As one of the easier Raids in Destiny 2, Root of Nightmares tends to be more relaxing than other Raids. The large amount of viable movement techniques makes this a super enjoyable experience for players willing to learn more advanced movement tech.</p>
+                            </div>
                         </div>
                     </div>
                     <div id="cataclysm" className="fake-block"/>
@@ -77,6 +96,36 @@ export function GuidePage() {
                             <h3>GENERAL INFO</h3>
                             <hr className="smallLine" />
                             <p>As one of the easier Raids in Destiny 2, Root of Nightmares tends to be more relaxing than other Raids. The large amount of viable movement techniques makes this a super enjoyable experience for players willing to learn more advanced movement tech.</p>
+                        </div>
+                        <div className="style-header">
+                            <div className="text">
+                                <h3>RUNNER</h3>
+                                <hr className="smallLine" />
+                                <p>As one of the easier Raids in Destiny 2, Root of Nightmares tends to be more relaxing than other Raids. The large amount of viable movement techniques makes this a super enjoyable experience for players willing to learn more advanced movement tech.</p>
+                            </div>
+                            <div className="img">
+                                <img src={CataclysmRunner} />
+                            </div>
+                        </div>
+                        <div className="style-header-inverted">
+                            <div className="img">
+                                <img src={CataclysmOther} />
+                            </div>
+                            <div className="text">
+                                <h3>PSIONS <span>/</span>/ TORMENTOR</h3>
+                                <hr className="smallLine" />
+                                <p>As one of the easier Raids in Destiny 2, Root of Nightmares tends to be more relaxing than other Raids. The large amount of viable movement techniques makes this a super enjoyable experience for players willing to learn more advanced movement tech.</p>
+                            </div>
+                        </div>
+                        <div id="secretchest1" className="style-header">
+                            <div className="text">
+                                <h3>SECRET CHEST <span>/</span>/ 1</h3>
+                                <hr className="smallLine" />
+                                <p>As one of the easier Raids in Destiny 2, Root of Nightmares tends to be more relaxing than other Raids. The large amount of viable movement techniques makes this a super enjoyable experience for players willing to learn more advanced movement tech.</p>
+                            </div>
+                            <div className="img">
+                                <img src={IntroImg} />
+                            </div>
                         </div>
                     </div>
                     <div id="scission" className="fake-block"/>
