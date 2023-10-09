@@ -5,12 +5,19 @@ import raidImg from "../img/background.png"
 
 export function Home() {
   const containerRef = useRef(null)
+  const containerRaidRef = useRef(null)
   const [isVisible, setIsVisible] = useState(false);
+  const [isVisible1, setIsVisible1] = useState(false);
 
   // A callback function that sets the state to true or false depending on if element is visible
   const callbackFunction = (entries) => {
     const [entry] = entries
     setIsVisible(entry.isIntersecting)
+  }
+
+  const callbackFunction1 = (entries) => {
+    const [entry] = entries
+    setIsVisible1(entry.isIntersecting)
   }
 
   // Options for the observer
@@ -33,6 +40,20 @@ export function Home() {
     
   }, [containerRef, options]);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(callbackFunction1, options)
+    if (containerRaidRef.current) {
+      observer.observe(containerRaidRef.current)
+    }
+
+    return () => {
+      if (containerRaidRef.current) {
+        observer.unobserve(containerRaidRef.current)
+      }
+    }
+    
+  }, [containerRaidRef, options]);
+
   return (
     <>
       <div className="landing">
@@ -40,12 +61,9 @@ export function Home() {
           <h2>ASCENDANT GUARDIAN</h2>
           <hr className="large-line"/>
           <hr/>
-          {/* <h2>Builds and Guides for Destiny 2</h2> */}
-          <a href="#builds">
-            {/* <div className="hr-left" /> */}
-            <div className="arrow"></div>
-            {/* <div className="hr-right" /> */}
-          </a>
+          <div className="arrow-box">
+            <a href="#builds" className="arrow"></a>
+          </div>
         </div>
       </div>
       <div className="container" id="builds">
@@ -68,17 +86,23 @@ export function Home() {
             </div>
           </div>
         </section>
-        <section className="guide-section">
+        <section ref={containerRaidRef} className="guide-section">
           <div className="info">
             <div className="text-container">
               <h2>GUIDES</h2>
               <hr />
-              <p>UNDER CONSTRUCTION</p>
+              <p>If you need guidance in <strong>Raids</strong> or <strong>Dungeons</strong> you can find help here.<br/><br/>
+                The guides go over everything you would need to know. This includes <strong>Encounters</strong>, <strong>Challenges</strong>
+                , <strong>Red Border Puzzles</strong> and <strong>Secret Chests</strong>. The instructions are easy to read yet still detailed 
+                with <strong>images</strong> and <strong>GIFs</strong> to make it easier to understand.
+              </p>
               <Link to="/guides" className="button">READ MORE</Link>
             </div>
           </div>
           <div className="raid-showcase">
-            <img src={raidImg} alt="" />
+            <div className={`raid ${isVisible1 ? 'transform-raid' : ''}`} />
+            <div className={`raid ${isVisible1 ? 'transform-raid' : ''}`} />
+            <div className={`raid ${isVisible1 ? 'transform-raid' : ''}`} />
           </div>
         </section>
       </div>
