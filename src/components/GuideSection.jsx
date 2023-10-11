@@ -8,8 +8,9 @@ import CataclysmOther from '../img/Gif/Cataclysm-Psion-Tormentor.gif'
 import IntroImg from '../img/LightNode.png'
 import TestImg from '../img/background.png'
 import CataclysmMap from '../img/CataclysmMap.jpeg'
+import FakeLoad from '../img/fake-load.png'
 
-export default function GuideSection({data, imagePopUp}) {
+export default function GuideSection({data, imagePopUp, setImgCount, imgCount, setImgLoadCount, imgLoadCount}) {
   return (
     <section>
         <div className="wrapper">
@@ -23,20 +24,24 @@ export default function GuideSection({data, imagePopUp}) {
             </div>
             { data.underSection == undefined ? null : data.underSection.map((data, i) => (
                 data.style == "style-noheader" ?
-                    <div key={i} id={`${data.id == undefined ? null : data.id}`} className={data.style}>
+                    <div key={i}>
+                    <div onLoad={() => setImgCount(prevImgCount => prevImgCount + 1)} className="fake-load"><img src={FakeLoad} alt="" /></div>
+                    <div id={`${data.id == undefined ? null : data.id}`} className={data.style}>
                         <div className="text">
-                            {console.log(data)}
                             <p>{parse(data.text)}</p>
                         </div>
                         <div className="img">
                             {data.module ? 
-                                data.image == "CataclysmMap" ? <img src={CataclysmMap} className="clickable" onClick={()=>{imagePopUp(CataclysmMap)}} /> 
+                                data.image == "CataclysmMap" ? <img onLoad={() => setImgLoadCount(prevImgLoadCount => prevImgLoadCount + 1)} src={CataclysmMap} className="clickable" onClick={()=>{imagePopUp(CataclysmMap)}} /> 
                                 : null 
-                            : data.image == "LightNode" ? <img src={IntroImg}/> : null}
+                            : data.image == "LightNode" ? <img onLoad={() => setImgLoadCount(prevImgLoadCount => prevImgLoadCount + 1)} src={IntroImg}/> : null}
                             {data.href == undefined ? null : <p>Credit: <a href={data.href} target="_blank">{data.name}</a></p>}
                         </div>
+                    </div>
                     </div> :
                 data.style == "style-header" ?
+                    <div key={i}>
+                    <div onLoad={() => setImgCount(prevImgCount => prevImgCount + 1)} className="fake-load"><img src={FakeLoad} alt="" /></div>
                     <div id={`${data.id == undefined ? null : data.id}`} className={data.style}>
                         <div className="text">
                             <h3>{parse(data.title)}</h3>
@@ -44,25 +49,29 @@ export default function GuideSection({data, imagePopUp}) {
                             <p>{parse(data.text)}</p>
                         </div>
                         <div className="img">
-                            {data.image == "RootRedBorder" ? <img src={RedBorderGif} /> 
-                            : data.image == "CataclysmRunner" ? <img src={CataclysmRunner} /> 
-                            : data.image == "TestImg" ? <img src={TestImg} /> : null }
+                            {data.image == "RootRedBorder" ? <img onLoad={() => setImgLoadCount(prevImgLoadCount => prevImgLoadCount + 1)} src={RedBorderGif} /> 
+                            : data.image == "CataclysmRunner" ? <img onLoad={() => setImgLoadCount(prevImgLoadCount => prevImgLoadCount + 1)} src={CataclysmRunner} /> 
+                            : data.image == "TestImg" ? <img onLoad={() => setImgLoadCount(prevImgLoadCount => prevImgLoadCount + 1)} src={TestImg} /> : null }
                         </div>
+                    </div>
                     </div> :
                 data.style == "style-header-inverted" ?
+                    <div key={i}>
+                    <div onLoad={() => setImgCount(prevImgCount => prevImgCount + 1)} className="fake-load"><img src={FakeLoad} alt="" /></div>
                     <div id={`${data.id == undefined ? null : data.id}`} className={data.style}>
                         <div className="img">
-                            {data.image == "RootRedBorder1" ? <img src={RedBorderGif1} /> 
-                            : data.image == "CataclysmOther" ? <img src={CataclysmOther} /> : null }
+                            {data.image == "RootRedBorder1" ? <img onLoad={() => setImgLoadCount(prevImgLoadCount => prevImgLoadCount + 1)} src={RedBorderGif1} /> 
+                            : data.image == "CataclysmOther" ? <img onLoad={() => setImgLoadCount(prevImgLoadCount => prevImgLoadCount + 1)} src={CataclysmOther} /> : null }
                         </div>
                         <div className="text">
                             <h3>{parse(data.title)}</h3>
                             <hr className="smallLine" />
                             <p>{parse(data.text)}</p>
                         </div>
+                    </div>
                     </div> :
                 data.style == "style-text" ?
-                    <div id={`${data.id == undefined ? null : data.id}`} className={data.style}>
+                    <div key={i} id={`${data.id == undefined ? null : data.id}`} className={data.style}>
                         <h3>{parse(data.title)}</h3>
                         <hr className="smallLine" />
                         <p>{parse(data.text)}</p>

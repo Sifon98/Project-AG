@@ -6,6 +6,7 @@ import { Guides } from '../pages/Guides'
 import { Titan } from '../pages/Titan'
 import { BuildGuide } from '../pages/BuildGuide'
 import { GuidePage } from '../pages/GuidePage'
+import { Page404 } from '../pages/404'
 
 
 export default function AnimatedRoutes() {
@@ -19,6 +20,7 @@ export default function AnimatedRoutes() {
       <Route path="/titan" element={<Titan />}/>
       <Route path="/build-guide" element={<BuildGuide />}/>
       <Route path="/guide-page" element={<GuidePage />}/>
+      <Route path="*" element={<Page404 />}/>
     </Routes>
   )
 }

@@ -86,12 +86,12 @@ export function Builds() {
           </div>
         </div>
       </div>
-      <div className="info-wrapper">
+      {/* <div className="info-wrapper">
         <div className="quick-info">
           <h3>All builds are future proof, meaning that they 
             do not require any artifact mods.</h3>
         </div>
-      </div>
+      </div> */}
       {/* Links to a component that sorts the builds and displays them */}
       <BuildContainer buildArray={buildArray} selectClass={selectClass} selectSubclass={selectSubclass} selectActivity={selectActivity}/>
     </>

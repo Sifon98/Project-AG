@@ -1,10 +1,11 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import { useSearchParams } from "react-router-dom"
 import '../scss/builds.scss'
 import HoverBox from '../components/HoverBox'
 import { preBuildArray } from '../components/BuildArray'
 import parse from 'html-react-parser'
 import SvgPage from '../components/Svg'
+import Loading from '../components/Loading'
 // Gif importing
 import arcHunter from '../img/Gif/arc-hunter.gif'
 

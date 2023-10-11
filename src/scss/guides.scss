@@ -148,6 +148,7 @@ $button-color: #111111;
     flex-direction: column;
     align-items: center;
     width: 100%;
+    padding-bottom: 100px;
   
     .guide-container {
         width: 1600px;
@@ -225,6 +226,7 @@ $button-color: #111111;
     justify-content: center;
     width: 100%;
     padding-top: 120px;
+    padding-bottom: 100px;
 
     .modal {
         cursor: pointer;

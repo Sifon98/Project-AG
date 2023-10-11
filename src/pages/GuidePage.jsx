@@ -1,19 +1,15 @@
-import React, {useState} from 'react'
-import { Link } from "react-router-dom"
+import React, {useState, useEffect} from 'react'
 import { preGuideArray } from '../components/GuideArray'
 import { useSearchParams } from "react-router-dom"
 import GuideSection from '../components/GuideSection'
-import RedBorderGif from '../img/Gif/Red-Border.gif'
-import RedBorderGif1 from '../img/Gif/Red-Border-1.gif'
-import CataclysmRunner from '../img/Gif/Cataclysm-Runner.gif'
-import CataclysmOther from '../img/Gif/Cataclysm-Psion-Tormentor.gif'
-import IntroImg from '../img/LightNode.png'
-import TestImg from '../img/background.png'
-import CataclysmMap from '../img/CataclysmMap.jpeg'
-
-import parse from 'html-react-parser'
+import Loading from '../components/Loading'
 
 export function GuidePage() {
+    // Used for loading screen
+    const [imgCount, setImgCount] = useState(10);
+    const [imgLoadCount, setImgLoadCount] = useState(0);
+    const [loading, setLoading] = useState(true);
+    const [unload, setUnload] = useState(false);
     // Image Popups
     const [popUp, setPopUp] = useState();
     const [imgUrl, setImgUrl] = useState('');
@@ -26,16 +22,24 @@ export function GuidePage() {
     const imagePopUp = (name) => {
         setImgUrl(name)
 
-        console.log(imgUrl)
         setPopUp(!popUp)
     }
 
-    preGuideArray.map((data) => (
-        console.log(data.guidePage)
-    ))
+    useEffect(() => {
+        setTimeout(() => setImgCount(prevImgCount => prevImgCount - 5), 3000)
+    }, [])
+
+    useEffect(() => {
+        imgCount == imgLoadCount ? (setUnload(() => true), setTimeout(() => setLoading(false), 1000)) : null
+    }, [imgCount, imgLoadCount])
+
+    // preGuideArray.map((data) => (
+    //     console.log(data.guidePage)
+    // ))
 
   return (
     <>
+    { loading && <Loading unload={unload}/> }
     { preGuideArray.map((data, i) => (
         data.guideId === urlGuideId ?
         <div key={i} id="intro" className="guide-page">
@@ -54,7 +58,7 @@ export function GuidePage() {
                 </div>
                 <div className="information">
                     { data.guidePage.section.map((data, i) => (
-                        <GuideSection key={i} data={data} imagePopUp={imagePopUp}/>
+                        <GuideSection key={i} data={data} imagePopUp={imagePopUp} setImgCount={setImgCount} imgCount={imgCount} setImgLoadCount={setImgLoadCount} imgLoadCount={imgLoadCount}/>
                     ))}
                 </div>
             </div>

@@ -431,6 +431,7 @@ export const preBuildArray = [
         aspectImg1: "https://www.bungie.net/common/destiny2_content/icons/838134e7e3d13bb5b74ae995653715fc.jpg", 
         aspectImg2: "https://www.bungie.net/common/destiny2_content/icons/4ba20180085e906f97ab2d039c20f1de.jpg", 
         exoticImg: "https://www.bungie.net/common/destiny2_content/icons/e6e10342a97eb3f6b974399ef7214e75.jpg",
+        author: "Sifon",
         buildGuide: {
             title: "AOE STRAND HUNTER",
             superGuide: {
