@@ -30,7 +30,7 @@ export function GuidePage() {
     }, [])
 
     useEffect(() => {
-        imgCount == imgLoadCount ? (setUnload(() => true), setTimeout(() => setLoading(false), 1000)) : null
+        imgCount == imgLoadCount ? (setUnload(() => true), setTimeout(() => setLoading(false), 500)) : null
     }, [imgCount, imgLoadCount])
 
     // preGuideArray.map((data) => (
@@ -43,22 +43,24 @@ export function GuidePage() {
     { preGuideArray.map((data, i) => (
         data.guideId === urlGuideId ?
         <div key={i} id="intro" className="guide-page">
-            <div className={`modal ${popUp == undefined ? null : popUp ? 'active' : 'inactive'}`} onClick={()=>{setPopUp(!popUp)}}>
+            <div className={`modal ${popUp == undefined ? '' : popUp ? 'active' : 'inactive'}`} onClick={()=>{setPopUp(!popUp)}}>
                 <img src={imgUrl} alt="Popup image, can be different" />
             </div>
             <div className="guide-page-container">
                 <div className="navigation-placeholder"/>
-                <div className="navigation">
-                    <h3>THE NAVIGATOR</h3>
-                    <hr className="largeLine" />
-                    <hr className="smallLine" />
-                    { data.guidePage.navigation.map((data, i) => (
-                        <div key={i}><a href={data.href} className={data.class}>{data.text}</a><br/></div>
-                    ))}
+                <div className={`navigation ${loading == false ? 'background-slide' : ''}`}>
+                    <div className={`wrapper ${loading == false ? 'content-fade' : ''}`}>
+                        <h3>THE NAVIGATOR</h3>
+                        <hr className="largeLine" />
+                        <hr className="smallLine" />
+                        { data.guidePage.navigation.map((data, i) => (
+                            <div key={i}><a href={data.href} className={data.class}>{data.text}</a><br/></div>
+                        ))}
+                    </div>
                 </div>
                 <div className="information">
                     { data.guidePage.section.map((data, i) => (
-                        <GuideSection key={i} data={data} imagePopUp={imagePopUp} setImgCount={setImgCount} imgCount={imgCount} setImgLoadCount={setImgLoadCount} imgLoadCount={imgLoadCount}/>
+                        <GuideSection key={i} data={data} imagePopUp={imagePopUp} setImgCount={setImgCount} setImgLoadCount={setImgLoadCount} loading={loading}/>
                     ))}
                 </div>
             </div>

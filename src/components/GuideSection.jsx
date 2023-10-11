@@ -10,10 +10,10 @@ import TestImg from '../img/background.png'
 import CataclysmMap from '../img/CataclysmMap.jpeg'
 import FakeLoad from '../img/fake-load.png'
 
-export default function GuideSection({data, imagePopUp, setImgCount, imgCount, setImgLoadCount, imgLoadCount}) {
+export default function GuideSection({data, imagePopUp, setImgCount, setImgLoadCount, loading}) {
   return (
-    <section>
-        <div className="wrapper">
+    <section className={`${loading == false ? 'background-slide' : ''}`}>
+        <div className={`wrapper ${loading == false ? 'content-fade' : ''}`}>
             <h3 className="medium-header">{parse(data.title)}</h3>
             <hr className="largeLine" />
             <hr className="smallLine" />

@@ -283,53 +283,79 @@ $button-color: #111111;
             height: 400px;
         }
 
+        .background-slide {
+            background-position: -100% 0%;
+            transition: ease-in-out 1s;
+        }
+
+        .content-fade {
+            animation: fade-in 2s forwards;
+        }
+
+        @keyframes fade-in {
+            0% {
+                opacity: 0;
+            }
+            55% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
         .navigation {
             padding: 10px 30px 30px 30px;
             left: 7%;
             position: fixed;
             width: 280px;
-            background-color: $main-color;
+            background-size: 200% 100%;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, $main-color 50%);
             border-left: solid 5px $border-color;
 
-            .nav-large {
-                display: inline-block;
-                text-decoration: none;
-                font-weight: 600;
-                color: #fefefe;
-                font-size: 24px;
-                letter-spacing: 0.2rem;
-                margin: 20px 0px 0px 10px;
-                transition: ease-in-out 0.2s;
-            }
+            .wrapper {
+                opacity: 0;
 
-            .nav-large:hover {
-                padding-left: 10px;
-                transition: ease-in-out 0.2s;
-            }
-
-            .nav-small {
-                display: inline-block;
-                text-decoration: none;
-                font-weight: 600;
-                color: #B4B9BD;
-                font-size: 18px;              
-                letter-spacing: 0.2rem;
-                margin: 0px 0px 0px 10px;
-                transition: ease-in-out 0.2s;
-            }
-
-            .nav-small:hover {
-                padding-left: 10px;
-                transition: ease-in-out 0.2s;
-            }
-
-            h3 {
-                margin: 20px 0px 0px 10px;
-            }
-
-            h4 {
-                color: #97989b;
-                margin: 0px 0px 0px 10px;
+                .nav-large {
+                    display: inline-block;
+                    text-decoration: none;
+                    font-weight: 600;
+                    color: #fefefe;
+                    font-size: 24px;
+                    letter-spacing: 0.2rem;
+                    margin: 20px 0px 0px 10px;
+                    transition: ease-in-out 0.2s;
+                }
+    
+                .nav-large:hover {
+                    padding-left: 10px;
+                    transition: ease-in-out 0.2s;
+                }
+    
+                .nav-small {
+                    display: inline-block;
+                    text-decoration: none;
+                    font-weight: 600;
+                    color: #B4B9BD;
+                    font-size: 18px;              
+                    letter-spacing: 0.2rem;
+                    margin: 0px 0px 0px 10px;
+                    transition: ease-in-out 0.2s;
+                }
+    
+                .nav-small:hover {
+                    padding-left: 10px;
+                    transition: ease-in-out 0.2s;
+                }
+    
+                h3 {
+                    margin: 20px 0px 0px 10px;
+                }
+    
+                h4 {
+                    color: #97989b;
+                    margin: 0px 0px 0px 10px;
+                }
             }
         }
 
@@ -343,7 +369,8 @@ $button-color: #111111;
                 justify-content: space-between;
                 width: 1100px;
                 padding: 20px 50px 20px 50px;
-                background-color: $main-color;
+                background-size: 200% 100%;
+                background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, $main-color 50%);
                 border-left: solid 5px $border-color;
                 margin-top: 50px;
 
@@ -357,6 +384,7 @@ $button-color: #111111;
                 }
 
                 .wrapper {
+                    opacity: 0;
 
                     span {
                         position: relative;
