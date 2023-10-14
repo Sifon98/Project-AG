@@ -1,5 +1,5 @@
 import React from 'react'
-import Zavala from '../img/zavala.png'
+import Zavala from '../img/logo-icon/zavala.png'
 import { Link } from "react-router-dom"
 
 export function Page404() {

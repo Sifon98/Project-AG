@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useLocation} from 'react-router-dom'
-import logo from '../img/logo.png'
+import logo from '../img/logo-icon/logo.png'
 import '../scss/main.scss'
 
 const activeNav = (setUseCheck) => {
@@ -8,7 +8,7 @@ const activeNav = (setUseCheck) => {
     setUseCheck(true);
 }
 
-export default function header() {
+export default function Header() {
   const location = useLocation();
   //true = give active css --- false = give inactive css
   const [isActive1, setIsActive1] = useState('');
@@ -53,7 +53,7 @@ export default function header() {
         setIsActive3(true);
         setIsActive4(false);
         activeNav(setUseCheck3)
-    }else if (location.pathname == '/titan'){
+    }else if (location.pathname == '/resources'){
         setIsActive1(false);
         setIsActive2(false);
         setIsActive3(false);
@@ -83,7 +83,7 @@ export default function header() {
                 <div className={useCheck3 == true ? isActive3 ? 'addline' : 'removeline' : ''}></div>
             </li>
             <li>
-                <Link className={isActive4 ? 'addcolor' : ''} to="/titan" onClick={() => activeNav(setUseCheck4)}>Titan</Link>
+                <Link className={isActive4 ? 'addcolor' : ''} to="/resources" onClick={() => activeNav(setUseCheck4)}>Resources</Link>
                 <div className={useCheck4 == true ? isActive4 ? 'addline' : 'removeline' : ''}></div>
             </li>
         </ul>

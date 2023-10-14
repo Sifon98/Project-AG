@@ -6,7 +6,7 @@ $button-color: #111111;
 .intro {
     display: flex;
     align-items: flex-end;
-    background-image: url(../img/BuildBanner.png);
+    background-image: url(../img/build-banner.png);
     background-size: cover;
     background-repeat: none;
     background-position: 0px;
@@ -562,7 +562,7 @@ $button-color: #111111;
             flex-direction: column;
             align-self: center;
             width: 90%;
-            background-image: url('../img/logoBg.png');
+            background-image: url('../img/logo-icon/logo-bg.png');
             background-repeat: no-repeat;
             background-position: center;
             background-size: 600px;
@@ -669,69 +669,129 @@ $button-color: #111111;
     filter: none;
 }
 
-
 // Images for cards and background on the Build Guide page
 #solarH {
-    background-image: url(../img/ClassPortrait/SolarHunter1.png);
+    background-image: url(../img/class-portrait/mini/SolarHunter1-min.png);
 }
 
 #solarW {
-    background-image: url(../img/ClassPortrait/SolarWarlock1.png);
+    background-image: url(../img/class-portrait/mini/SolarWarlock1-min.png);
 }
 
 #solarT {
-    background-image: url(../img/ClassPortrait/SolarTitan1.png);
+    background-image: url(../img/class-portrait/mini/SolarTitan1-min.png);
 }
 
 #solarHPVP {
-    background-image: url(../img/ClassPortrait/SolarHunter2.png);
+    background-image: url(../img/class-portrait/mini/SolarHunter2-min.png);
 }
 
 #solarSpecialH {
-    background-image: url(../img/ClassPortrait/SolarHunter3.png);
+    background-image: url(../img/class-portrait/mini/SolarHunter3-min.png);
 }
 
 #strandH {
-    background-image: url(../img/ClassPortrait/StrandHunter1.png);
+    background-image: url(../img/class-portrait/mini/StrandHunter1-min.png);
 }
 
 #strandT {
-    background-image: url(../img/ClassPortrait/StrandTitan1.png);
+    background-image: url(../img/class-portrait/mini/StrandTitan1-min.png);
 }
 
 #strandHPVP {
-    background-image: url(../img/ClassPortrait/StrandHunter2.png);
+    background-image: url(../img/class-portrait/mini/StrandHunter2-min.png);
 }
 
 #voidH {
-    background-image: url(../img/ClassPortrait/VoidHunter1.png);
+    background-image: url(../img/class-portrait/mini/VoidHunter1-min.png);
 }
 
 #voidW {
-    background-image: url(../img/ClassPortrait/VoidWarlock1.png);
+    background-image: url(../img/class-portrait/mini/VoidWarlock1-min.png);
 }
 
 #voidT {
-    background-image: url(../img/ClassPortrait/VoidTitan1.png);
+    background-image: url(../img/class-portrait/mini/VoidTitan1-min.png);
 }
 
 #arcH {
-    background-image: url(../img/ClassPortrait/ArcHunter1.png);
+    background-image: url(../img/class-portrait/mini/ArcHunter1-min.png);
 }
 
 #arcT {
-    background-image: url(../img/ClassPortrait/ArcTitan1.png);
+    background-image: url(../img/class-portrait/mini/ArcTitan1-min.png);
 }
 
 #stasisH {
-    background-image: url(../img/ClassPortrait/StasisHunter1.png);
+    background-image: url(../img/class-portrait/mini/StasisHunter1-min.png);
 }
 
 #stasisT {
-    background-image: url(../img/ClassPortrait/StasisTitan1.png);
+    background-image: url(../img/class-portrait/mini/StasisTitan1-min.png);
+}
+
+// Images for cards and background on the Build Guide page
+#solarH-large {
+    background-image: url(../img/class-portrait/SolarHunter1.png);
+}
+
+#solarW-large {
+    background-image: url(../img/class-portrait/SolarWarlock1.png);
+}
+
+#solarT-large {
+    background-image: url(../img/class-portrait/SolarTitan1.png);
+}
+
+#solarHPVP-large {
+    background-image: url(../img/class-portrait/SolarHunter2.png);
+}
+
+#solarSpecialH-large {
+    background-image: url(../img/class-portrait/SolarHunter3.png);
+}
+
+#strandH-large {
+    background-image: url(../img/class-portrait/StrandHunter1.png);
+}
+
+#strandT-large {
+    background-image: url(../img/class-portrait/StrandTitan1.png);
+}
+
+#strandHPVP-large {
+    background-image: url(../img/class-portrait/StrandHunter2.png);
+}
+
+#voidH-large {
+    background-image: url(../img/class-portrait/VoidHunter1.png);
+}
+
+#voidW-large {
+    background-image: url(../img/class-portrait/VoidWarlock1.png);
+}
+
+#voidT-large {
+    background-image: url(../img/class-portrait/VoidTitan1.png);
+}
+
+#arcH-large {
+    background-image: url(../img/class-portrait/ArcHunter1.png);
+}
+
+#arcT-large {
+    background-image: url(../img/class-portrait/ArcTitan1.png);
+}
+
+#stasisH-large {
+    background-image: url(../img/class-portrait/StasisHunter1.png);
+}
+
+#stasisT-large {
+    background-image: url(../img/class-portrait/StasisTitan1.png);
 }
 
 // Gif
 #arcHunterGif {
-    background-image: url(../img/Gif/Cataclysm-Psion-Tormentor.gif);
+    background-image: url(../img/gif/Cataclysm-Psion-Tormentor.gif);
 }

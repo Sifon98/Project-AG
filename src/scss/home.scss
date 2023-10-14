@@ -1,11 +1,10 @@
-$bg-image: url('../img/MainBackground.png');
 $border-color: #97989b;
 $main-color: #0A0A12;
 $button-color: #111111;
 
 // CSS for the landing, intro section
 .landing {
-    background-image: $bg-image;
+    background-image: url('../img/main-background.png');
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -91,7 +90,7 @@ $button-color: #111111;
             .card {
                 transform-origin: bottom left;
                 position: absolute;
-                background-image: url(../img/ClassPortrait/SolarHunter1.png);
+                background-image: url(../img/class-portrait/mini/SolarHunter1-min.png);
                 background-position: center;
                 background-size: cover;
                 width: 500px;
@@ -103,17 +102,17 @@ $button-color: #111111;
             }
 
             .card:nth-child(2) {
-                background-image: url(../img/ClassPortrait/StrandTitan1.png);
+                background-image: url(../img/class-portrait/mini/StrandTitan1-min.png);
                 z-index: 3;
             }
 
             .card:nth-child(3) {
-                background-image: url(../img/ClassPortrait/StasisHunter1.png);
+                background-image: url(../img/class-portrait/mini/StasisHunter1-min.png);
                 z-index: 2;
             }
 
             .card:nth-child(4) {
-                background-image: url(../img/ClassPortrait/VoidWarlock1.png);
+                background-image: url(../img/class-portrait/mini/VoidWarlock1-min.png);
                 z-index: 1;
             }
 
@@ -143,7 +142,7 @@ $button-color: #111111;
             .raid {
                 transform-origin: bottom;
                 position: absolute;
-                background-image: url(../img/kingsArt.jpg);
+                background-image: url(../img/kings-art.jpg);
                 background-position: center;
                 background-size: cover;
                 width: 300px;
@@ -155,12 +154,12 @@ $button-color: #111111;
             }
 
             .raid:nth-child(2) {
-                background-image: url(../img/vaultArt.jpg);
+                background-image: url(../img/vault-art.jpg);
                 z-index: 3;
             }
 
             .raid:nth-child(3) {
-                background-image: url(../img/crotaArt.jpg);
+                background-image: url(../img/crota-art.jpg);
                 z-index: 2;
             }
 
@@ -230,7 +229,6 @@ $button-color: #111111;
     }
     
     .guide-section {
-        border: none;
 
        .raid-showcase {
             display: flex;
@@ -241,7 +239,68 @@ $button-color: #111111;
             img {
                 width: 500px;
             }
-       }
+        }
+    }
+
+    .resource-section {
+        border: none;
+
+        .resource-showcase {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50%;
+
+            .resource {
+                transform-origin: bottom;
+                position: absolute;
+                background-image: url(../img/resources/dim.jpg);
+                background-position: center;
+                background-size: cover;
+                width: 430px;
+                height: 250px;
+                z-index: 4;
+                border-radius: 30px;
+                transition: ease-in-out 0.8s;
+                letter-spacing: 0.2rem;
+            }
+
+            .resource:nth-child(2) {
+                background-image: url(../img/resources/d2armorpicker.png);
+            }
+
+            .resource:nth-child(3) {
+                background-image: url(../img/resources/ishtar.jpg);
+            }
+
+            .resource:nth-child(4) {
+                background-image: url(../img/resources/raid.png);
+            }
+
+            .transform-resource:nth-child(1) {
+                transform-origin: bottom right;
+                margin-left: 150px;
+                margin-top: 120px;
+                transform: rotate(-20deg);
+            }
+
+            .transform-resource:nth-child(2) {
+                transform-origin: top right;
+                margin-left: 280px;
+                margin-top: 50px;
+                transform: rotate(30deg);
+            }
+
+            .transform-resource:nth-child(3) {
+                margin-right: 150px;
+                margin-bottom: 190px;
+                transform: rotate(-60deg);
+            }
+
+            .transform-resource:nth-child(4) {
+                transform: rotate(10deg);
+            }
+        }
     }
 }
 

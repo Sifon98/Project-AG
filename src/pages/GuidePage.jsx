@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
-import { preGuideArray } from '../components/GuideArray'
+import { preGuideArray } from '../components/guide/GuideArray'
 import { useSearchParams } from "react-router-dom"
-import GuideSection from '../components/GuideSection'
+import GuideSection from '../components/guide/GuideSection'
 import Loading from '../components/Loading'
 
 export function GuidePage() {

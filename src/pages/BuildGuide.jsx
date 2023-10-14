@@ -2,12 +2,12 @@ import React, {useState, useEffect} from 'react'
 import { useSearchParams } from "react-router-dom"
 import '../scss/builds.scss'
 import HoverBox from '../components/HoverBox'
-import { preBuildArray } from '../components/BuildArray'
+import { preBuildArray } from '../components/build/BuildArray'
 import parse from 'html-react-parser'
 import SvgPage from '../components/Svg'
 import Loading from '../components/Loading'
 // Gif importing
-import arcHunter from '../img/Gif/arc-hunter.gif'
+import arcHunter from '../img/gif/arc-hunter.gif'
 
 export function BuildGuide() {
   // Get the array with all the build info
@@ -21,7 +21,7 @@ export function BuildGuide() {
         data.buildId === urlBuildId ?
         <div key={i} className="build-guide-container">
             <div className="build-general">
-                <section id={data.classImg} className="background-img">
+                <section id={`${data.classImg}-large`} className="background-img">
                     <div className="above-layer">
                         <div className="shared-container">
                             <h3>{ data.buildGuide.title }</h3>

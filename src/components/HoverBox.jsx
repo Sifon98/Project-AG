@@ -1,8 +1,8 @@
 import React from 'react'
 import parse from 'html-react-parser';
-import elementArc from '../img/elementArc.png'
-import elementVoid from '../img/elementVoid.png'
-import elementSolar from '../img/elementSolar.png'
+import elementArc from '../img/logo-icon/element-arc.png'
+import elementVoid from '../img/logo-icon/element-void.png'
+import elementSolar from '../img/logo-icon/element-solar.png'
 
 export default function HoverBox({image, i, title, energy, text, superImg}) {
   return (

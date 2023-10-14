@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import '../scss/builds.scss'
-import BuildContainer from '../components/BuildContainer'
-import { preBuildArray } from '../components/BuildArray'
+import BuildContainer from '../components/build/BuildContainer'
+import { preBuildArray } from '../components/build/BuildArray'
 
 export function Builds() {
   // The array that stores all the builds and their info

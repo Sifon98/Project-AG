@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import '../scss/guides.scss'
 import { Link } from "react-router-dom"
-import { preGuideArray } from '../components/GuideArray'
-import GuideContainer from '../components/GuideContainer'
+import { preGuideArray } from '../components/guide/GuideArray'
+import GuideContainer from '../components/guide/GuideContainer'
 
 export function Guides() {
   const guideArray = preGuideArray;
