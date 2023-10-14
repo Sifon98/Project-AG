@@ -140,7 +140,7 @@ export function Home() {
                 The <strong>D2 community</strong> is one of the best in gaming and have created various <strong>sites</strong> and <strong>spreadsheets</strong> for anyone to use.
                 This includes sites that allow you to <strong>equip</strong> any items from your <strong>vault</strong> or other <strong>characters</strong> to sites that <strong>optimize</strong> your <strong>builds</strong> further.
               </p>
-              <Link to="/builds" className="button">READ MORE</Link>
+              <Link to="/resources" className="button">READ MORE</Link>
             </div>
           </div>
         </section>

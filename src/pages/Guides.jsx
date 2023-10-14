@@ -24,7 +24,10 @@ export function Guides() {
 
   return (
     <>
-    <div className="intro-guides"/>
+    <div className="back-color">
+        <div className="intro intro-guides" />
+        <div className="border" />
+      </div>
     <div className={`hider ${menuOpen1 ? 'active' : 'inactive'}`} onClick={()=>{closeAll()}}></div>
     <div className="sorting-container">
       <h2 className="medium-header">SORTING:</h2>

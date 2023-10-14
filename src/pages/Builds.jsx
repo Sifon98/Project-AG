@@ -40,7 +40,10 @@ export function Builds() {
 
   return (
     <>
-      <div className="intro" />
+      <div className="back-color">
+        <div className="intro" />
+        <div className="border" />
+      </div>
       {/* an invisible box that hides the menu when you click outside of it */}
       <div className={`hider ${menuOpen1 || menuOpen2 || menuOpen3 ? 'active' : 'inactive'}`} onClick={()=>{closeAll()}}></div>
       <div className="sorting-container">

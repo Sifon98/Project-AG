@@ -22,8 +22,8 @@ export function Resources() {
     <div id="intro" className="resource-page">
       <div className="resource-page-container">
         <div className="navigation-placeholder"/>
-        <div className="navigation">
-          <div className="wrapper">
+        <div className="navigation background-slide">
+          <div className="wrapper content-fade">
             <h3>THE NAVIGATOR</h3>
             <hr className="largeLine" />
             <hr className="smallLine" />
@@ -38,8 +38,8 @@ export function Resources() {
           </div>
         </div>
         <div className="information">
-          <section>
-            <div className="wrapper">
+          <section className="background-slide">
+            <div className="wrapper content-fade">
               <h3 className="medium-header">ESSENTIAL</h3>
               <hr className="largeLine" />
               <hr className="smallLine" />
@@ -133,8 +133,8 @@ export function Resources() {
             </div>
             <div id="collection" className="fake-block"/>
           </section>
-          <section>
-            <div className="wrapper">
+          <section className="background-slide">
+            <div className="wrapper content-fade">
               <h3 className="medium-header">COLLECTION</h3>
               <hr className="largeLine" />
               <hr className="smallLine" />
@@ -215,8 +215,8 @@ export function Resources() {
             </div>
             <div id="statistics" className="fake-block"/>
           </section>
-          <section>
-            <div className="wrapper">
+          <section className="background-slide">
+            <div className="wrapper content-fade">
               <h3 className="medium-header">STATISTICS</h3>
               <hr className="largeLine" />
               <hr className="smallLine" />
@@ -297,8 +297,8 @@ export function Resources() {
             </div>
             <div id="lore" className="fake-block"/>
           </section>
-          <section>
-            <div className="wrapper">
+          <section className="background-slide">
+            <div className="wrapper content-fade">
               <h3 className="medium-header">LORE</h3>
               <hr className="largeLine" />
               <hr className="smallLine" />

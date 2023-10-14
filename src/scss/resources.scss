@@ -20,12 +20,42 @@ $button-color: #111111;
             height: 400px;
         }
 
+        .background-slide {
+            animation: slide-in 1s forwards;
+        }
+
+        .content-fade {
+            animation: fade-in 2s forwards;
+        }
+
+        @keyframes slide-in {
+            0% {
+                background-position: 0% 0%;
+            }
+            100% {
+                background-position: -100% 0%;
+            }
+        }
+
+        @keyframes fade-in {
+            0% {
+                opacity: 0;
+            }
+            55% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
         .navigation {
             padding: 10px 30px 30px 30px;
             left: 7%;
             position: fixed;
             width: 280px;
-            background-color: $main-color;
+            background-size: 200% 100%;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, $main-color 50%);
             border-left: solid 5px $border-color;
             
             .wrapper {
@@ -84,7 +114,8 @@ $button-color: #111111;
                 justify-content: space-between;
                 width: 1100px;
                 padding: 20px 50px 20px 50px;
-                background-color: $main-color;
+                background-size: 200% 100%;
+                background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, $main-color 50%);
                 border-left: solid 5px $border-color;
                 margin-top: 50px;
 
