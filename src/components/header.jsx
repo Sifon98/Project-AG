@@ -8,7 +8,7 @@ const activeNav = (setUseCheck) => {
     setUseCheck(true);
 }
 
-export default function Header() {
+export default function Header() { 
   const location = useLocation();
   //true = give active css --- false = give inactive css
   const [isActive1, setIsActive1] = useState('');
