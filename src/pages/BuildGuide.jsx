@@ -7,7 +7,7 @@ import parse from 'html-react-parser'
 import SvgPage from '../components/Svg'
 import Loading from '../components/Loading'
 // Gif importing
-import arcHunter from '../img/gif/arc-hunter.gif'
+import arcHunter from '../img/Gif/arc-hunter.gif'
 
 export function BuildGuide() {
   // Get the array with all the build info
