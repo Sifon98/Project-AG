@@ -76,13 +76,16 @@ export function Home() {
 
   return (
     <>
-      <div className="landing">
-        <div className="text-box">
-          <h2>ASCENDANT GUARDIAN</h2>
-          <hr className="large-line"/>
-          <hr/>
-          <div className="arrow-box">
-            <a href="#builds" className="arrow"></a>
+      <div className="background-color">
+        <div className="landing">
+          <div className="text-box">
+            <h2>ASCENDANT GUARDIAN</h2>
+            {/* <hr className="large-line"/>
+            <hr/> */}
+            <p><i>Get ready for your <strong>ascension</strong> guardian, builds and guides to help with your <strong>journey</strong></i></p>
+            <div className="arrow-box">
+              <a href="#builds" className="arrow"></a>
+            </div>
           </div>
         </div>
       </div>

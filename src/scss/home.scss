@@ -3,6 +3,10 @@ $main-color: #0A0A12;
 $button-color: #111111;
 
 // CSS for the landing, intro section
+.background-color {
+    background-color: $main-color;
+}
+
 .landing {
     // background-image: url('../img/corrupted.jpg');
     // background-image: url('../img/star.jpg');
@@ -15,25 +19,35 @@ $button-color: #111111;
     height: 100vh;
     z-index: -10;
     display: flex;
+    animation: landing-fade 2s;
 
     .text-box {
         padding: 30px;
         width: auto;
         margin: auto;
+        margin-top: 350px;
         display: flex;
-        flex-direction: column;
+        flex-direction: column;    
 
         h2 {
             margin: 0px;
             font-size: 90px;
             letter-spacing: 0.4rem;
-            text-shadow: 0px 7px 2px $main-color;
+            text-shadow: 0px 5px 2px $main-color;
+            animation: fade-text 2.5s;
         }
         
         hr {
             margin: 0px;
             width: 150px;
             border: 5px solid #B4B9BD;
+        }
+
+        p {
+            font-size: 24px;
+            text-align: center;
+            text-shadow: 0px 2px 2px $main-color;
+            animation: fade-text1 2.8s;
         }
 
         .large-line {
@@ -49,6 +63,7 @@ $button-color: #111111;
             text-decoration: none;
             justify-content: center;
             align-items: center;
+            animation: fade-text 3.1s;
 
             .arrow {
                 margin: 0px 20px;
@@ -64,6 +79,46 @@ $button-color: #111111;
                 margin: 0px 24px;
             }
         }
+
+        @keyframes fade-text {
+            0% {
+                opacity: 0;
+            }
+            66% {
+                opacity: 0;
+                margin-top: 40px;
+            }
+            100% {
+                opacity: 1;
+                margin-top: 0px;
+            }
+        }
+        
+        @keyframes fade-text1 {
+            0% {
+                opacity: 0;
+            }
+            66% {
+                opacity: 0;
+                margin-top: 65px;
+            }
+            100% {
+                opacity: 1;
+                margin-top: 25px;
+            }
+        }
+    }
+}
+
+@keyframes landing-fade {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
 
@@ -86,6 +141,7 @@ $button-color: #111111;
         border-image: linear-gradient(to right, $main-color 10%, $border-color 30%, $border-color 70%, $main-color 90%) 3;
 
         .cards {
+            animation: landing-fade 2s;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -138,6 +194,7 @@ $button-color: #111111;
         }
 
         .raid-showcase {
+            animation: landing-fade 2s;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -185,6 +242,7 @@ $button-color: #111111;
         }
 
         .info {
+            animation: landing-fade 2s;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -250,6 +308,7 @@ $button-color: #111111;
         border: none;
 
         .resource-showcase {
+            animation: landing-fade 2s;
             display: flex;
             align-items: center;
             justify-content: center;
